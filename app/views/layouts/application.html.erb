@@ -10,7 +10,7 @@
 <%= render 'layouts/top_nav' %>
   <div class="container">
     <% if current_user %>
-    Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout', class: "btn btn-danger" %>
+    Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout', class: "btn btn-danger" %>
   <% else %>
     <%= link_to 'Login', '/login', class: "btn btn-success" %> | <%= link_to 'Signup', '/signup', class: "btn btn-primary" %>
   <% end %>
