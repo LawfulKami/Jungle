@@ -20,8 +20,8 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
       visit root_path
   
       # commented out b/c it's for debugging only
-      save_and_open_screenshot
+      # save_and_open_screenshot
   
-      expect(page).to have_css 'article.product', count: 10
+      expect(page).to have_css 'product-detail'
     end
 end
