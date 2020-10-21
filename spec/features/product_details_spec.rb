@@ -18,11 +18,11 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
 
       scenario "User see a specific product" do
         visit root_path
-        first(:link, "Details")
+        first(:link, 'Details »').click
     
         # commented out b/c it's for debugging only
+        
+        expect(page).to have_css '.product-detail'
         # save_and_open_screenshot
-    
-        expect(page).to have_css 'article.product', count: 10
       end
 end
